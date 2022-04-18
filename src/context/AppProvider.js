@@ -14,8 +14,9 @@ function AppProvider({ children }) {
     setPlanets();
   }, []);
 
+  const contextValue = { data };
   return (
-    <AppContext.Provider value={ data }>
+    <AppContext.Provider value={ contextValue }>
       { children }
     </AppContext.Provider>
   );

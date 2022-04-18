@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 import AppProvider from './context/AppProvider';
+import TableStartWars from './TableStarWars';
 
 function App() {
   return (
     <AppProvider>
-      <span>Hello, App!</span>
+      <TableStartWars />
     </AppProvider>
   );
 }
