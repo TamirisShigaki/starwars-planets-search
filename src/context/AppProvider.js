@@ -22,7 +22,7 @@ function AppProvider({ children }) {
   };
 
   return (
-    <AppContext.Provider value={ { data, filterPlanet } }>
+    <AppContext.Provider value={ { data, setData, filterPlanet } }>
       { children }
     </AppContext.Provider>
   );
