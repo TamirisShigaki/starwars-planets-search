@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AppContext from '../context/AppContext';
 
 function FilterPlanets() {
@@ -29,6 +29,8 @@ function FilterPlanets() {
 
   const handleClick = () => {
     const { column, comparison, value } = filterByNumericValues;
+    setOptionColumn(optionsColumn.filter((element) => column !== element));
+
     switch (comparison) {
     case 'maior que':
       return setData(data.filter((planet) => +planet[column] > +value));
@@ -40,6 +42,17 @@ function FilterPlanets() {
       return data;
     }
   };
+
+  useEffect(() => {
+    const atualizaOptions = () => {
+      setFilterByNumericValues({
+        column: optionsColumn[0],
+        comparison: 'maior que',
+        value: 0,
+      });
+    };
+    atualizaOptions();
+  }, [optionsColumn]);
 
   return (
     <form>
