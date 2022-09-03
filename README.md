@@ -1,4 +1,11 @@
-# 🚧 README em construção 🚧
+# 🚧 Readme em construção 🚧
+
+## 19 – Projeto Star Wars
+
+## Contexto
+
+Projeto pessoal desenvolvido na Trybe, onde tive que desenvolver uma aplicação de `tabela em React`, sendo possível filtrar dados dos planetas Star Wars através de uma API publica. Além de usar a API React Context para gerenciamento de estado.
+
 
 <!-- Olá, Tryber!
 
